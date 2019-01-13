@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <CBKit/CBKit.h>
 
 @interface ViewController ()
 
@@ -16,7 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    CBStarRatingView *ratingView = [[CBStarRatingView alloc]initWithFrame:CGRectMake(20, 100, 200, 40)];
+    ratingView.starColor = [UIColor redColor];
+    ratingView.starPlaceHolderColor= [UIColor lightGrayColor];
+    ratingView.starPlaceHolderBorderColor = [UIColor lightGrayColor];
+    [self.view addSubview:ratingView];
 }
 
 
